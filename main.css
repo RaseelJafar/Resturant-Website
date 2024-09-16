@@ -124,3 +124,101 @@ button:hover{
 .buttons button:first-of-type{
     background-color: rgb(248, 213, 167);
 }
+
+i{
+    color: #969696;
+}
+
+footer h3{
+    color: white;
+}
+footer{
+    background-color: #403d38;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #869690;
+}
+
+footer ul li{
+    border-bottom: 2px solid black;
+}
+
+footer .MainFooter{
+    display: flex;
+    justify-content: center;
+    background-color: #403d38;
+    padding-top : 40px;
+    padding-bottom: 40px ;
+}
+
+.Sec{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.Sec ul{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footerSec4, .footerSec1{
+    width: 25%;
+}
+
+.footerSec4 img{
+    width: 300px;
+    height: 300px;
+    opacity: 0.1;
+    position: absolute;
+}
+
+.FooterSec4 ul li{
+    display: flex;
+    gap: 10px;
+}
+
+ul li:last-of-type{
+    border-bottom: none;
+}
+
+footer .SubFooter{
+    background-color: #403d38;
+    display: flex;
+    justify-content: center;
+}
+
+footer .SubFooter .container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.icons .icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: #484540;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+.icons .icon i{
+    font-size: 40px; 
+    color: #8c8a86;
+}
+
+footer .SubFooter .container img{
+    width: 400px;
+    height: 200px;
+}
