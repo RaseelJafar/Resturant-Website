@@ -3,7 +3,11 @@
     margin: 0;
     box-sizing: border-box;
 }
+:root{
+    --subFont: "Dancing Script", cursive;
 
+}
+/*nav*/
 a{
     text-decoration: none;
     color: black;
@@ -19,6 +23,7 @@ nav{
     background-color: rgba(255, 255, 255, 0.511);
     color: black;
     z-index: 9999;
+    padding: 30px;
 }
 
 nav img{
@@ -66,14 +71,13 @@ nav .container .end{
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/*header*/
 header{
     background-image: url(./images/background.jpg);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .Head{
     display: flex;
     flex-wrap: wrap;
@@ -84,51 +88,38 @@ header{
     height: 100vh;
     color: white;
     gap: 20px;
-
-
 }
-
 .Head img{
     width: 400px;
     height: 200px;
 }
-
 .Head h1{
     font-size: 60px; 
     font-weight: 200;
-
 }
-
 .Head  p{
-    font-family: "Dancing Script", cursive;
+    font-family: var(--subFont);
     font-size: 30px;
-
 }
-
-
 .buttons{
     display: flex;
     justify-content: center;
     gap: 10px;
 }
-
 .buttons button{
     padding: 15px;
     border-radius: 10px;
 }
-
 button:hover{
     background-color: rgb(239, 210, 172);
 }
-
 .buttons button:first-of-type{
     background-color: rgb(248, 213, 167);
 }
-
+/*footer*/
 i{
     color: #969696;
 }
-
 footer h3{
     color: white;
 }
@@ -139,11 +130,9 @@ footer{
     gap: 20px;
     color: #869690;
 }
-
 footer ul li{
     border-bottom: 2px solid black;
 }
-
 footer .MainFooter{
     display: flex;
     justify-content: center;
@@ -151,46 +140,38 @@ footer .MainFooter{
     padding-top : 40px;
     padding-bottom: 40px ;
 }
-
 .Sec{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .Sec ul{
     display: flex;
     height: 100%;
     flex-direction: column;
     gap: 20px;
 }
-
 .footerSec4, .footerSec1{
     width: 25%;
 }
-
 .footerSec4 img{
     width: 300px;
     height: 300px;
     opacity: 0.1;
     position: absolute;
 }
-
 .FooterSec4 ul li{
     display: flex;
     gap: 10px;
 }
-
 ul li:last-of-type{
     border-bottom: none;
 }
-
 footer .SubFooter{
     background-color: #403d38;
     display: flex;
     justify-content: center;
 }
-
 footer .SubFooter .container{
     display: flex;
     flex-direction: column;
@@ -221,4 +202,115 @@ footer .SubFooter .container{
 footer .SubFooter .container img{
     width: 400px;
     height: 200px;
+}
+/*section*/
+.Info{
+    display: flex;
+    justify-content: center;
+}
+.Info p{
+    color: #8c8a86;
+}
+.Info .container{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+.ImageInfo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.DataInfo{
+   width: 40%; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 30px;
+}
+.DataInfo ul{
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+}
+.DataInfo li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.DataInfo ul li .item i{
+    background-color: #c1ab84;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+}
+.DataInfo h2{
+    font-size: 35px;
+    font-weight: 100;
+}
+.Pa{
+    font-family: var(--subFont);
+    font-size: 25px;
+    color: rgb(196, 144, 77);
+}
+/*section2*/
+.Review{
+    display: flex;
+    justify-content: center;
+}
+
+.Review p{
+    color: #8c8a86;
+}
+.Review .container{
+    display: flex;
+    justify-content: center;
+}
+.ImageInfoREV{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+.DataInfoREV{
+   width: 40%; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 30px;
+}
+.DataInfoREV ul{
+    display: flex ;
+    flex-direction: column;
+    gap: 10px;
+}
+.DataInfoREV li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.DataInfoREV ul li .item i{
+    background-color: white;
+    color: #c1ab84;
+    border-radius: 50%;
+    padding: 15px;
+}
+.DataInfoREV h2{
+    font-size: 35px;
+    font-weight: 100;
+}
+.Pa{
+    font-family: var(--subFont);
+    font-size: 25px;
+    color: rgb(196, 144, 77);
+}
+/*section3*/
+.image{
+    background-image: url(./images/chairs.jpg);
+    height: 50vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section{
+    padding: 50px;
 }
