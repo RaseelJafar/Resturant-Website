@@ -90,8 +90,8 @@ header{
     gap: 20px;
 }
 .Head img{
-    width: 400px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
 }
 .Head h1{
     font-size: 60px; 
@@ -137,8 +137,11 @@ footer .MainFooter{
     display: flex;
     justify-content: center;
     background-color: #403d38;
+    flex-wrap: wrap;
+    align-content: center;
     padding-top : 40px;
     padding-bottom: 40px ;
+    width: 100% !important; /* Ensure container has full width */
 }
 .Sec{
     display: flex;
@@ -148,11 +151,12 @@ footer .MainFooter{
 .Sec ul{
     display: flex;
     height: 100%;
+    flex-wrap: wrap;
     flex-direction: column;
     gap: 20px;
 }
 .footerSec4, .footerSec1{
-    width: 25%;
+    width: 20%;
 }
 .footerSec4 img{
     width: 300px;
@@ -160,7 +164,7 @@ footer .MainFooter{
     opacity: 0.1;
     position: absolute;
 }
-.FooterSec4 ul li{
+.footerSec4 ul li{
     display: flex;
     gap: 10px;
 }
@@ -178,6 +182,7 @@ footer .SubFooter .container{
     text-align: center;
     gap: 20px;
 }
+
 .icons{
     display: flex;
     justify-content: center;
@@ -257,6 +262,7 @@ footer .SubFooter .container img{
 .Review{
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .Review p{
@@ -270,6 +276,11 @@ footer .SubFooter .container img{
     width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+.ImageInfoREV img{
+    width: 90%;
+    height: 70%;
 }
 .DataInfoREV{
    width: 40%; 
@@ -386,6 +397,246 @@ p{
 }
 .last .container h1{
     font-size: 60px;
+}
+@media (max-width: 1024px) {
+    .Info .container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+    
+    .ImageInfo, .DataInfo {
+        width: 90%; /* Make sections take up more width */
+        text-align: center; /* Center text */
+    }
+    
+    .Review .container {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items */
+        gap: 20px; /* Space between the image and text */
+    }
+    
+    .ImageInfoREV {
+        width: 90%; /* Make the image responsive */
+        display: flex;
+        justify-content: center; /* Center the image */
+    }
+
+    .DishesTypes {
+        flex-wrap: wrap; /* Allow wrapping of dish items */
+        justify-content: center; /* Center dish items */
+    }
+
+    .DishesTypes .Dish {
+        width: 45%; /* Adjust width for two columns */
+        margin: 10px; /* Add space between dishes */
+    }
+
+    .Dishes h2, .Dishes p {
+        text-align: center; /* Center the heading and paragraph */
+        width: 90%; /* Limit width for readability */
+    }
+    .footerSec4 img {
+        width: 100%; /* Make the image take the full width of its container */
+        height: auto; /* Maintain aspect ratio */
+        opacity: 0.1; /* Keep the existing opacity */
+        position: relative; /* Change to relative for better layout control */
+    }
+    
+}
+
+@media (max-width:768px){
+    .footerSec4 img{
+        height: 10px;
+        width: 10px;
+    }
+    .footer .Sec{
+        width: 100%;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        flex-direction: column;
+    }
+    .MainFooter .container{
+        gap: 20px;
+    }
+    footer ul li{
+        border-bottom: none;
+    }
+    .Navlist ul {
+        gap: 10px; /* Adjust spacing between items */
+    }
+
+    .DishesTypes {
+        flex-direction: column; /* Stack dishes vertically */
+    }
+
+    .DishesTypes .Dish {
+        margin-bottom: 20px; /* Add space between dishes */
+    }
+    /**************************************/
+    .Info .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .ImageInfo, .DataInfo {
+        width: 100%;
+    }
+    .Review .container {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center the items */
+        gap: 20px; /* Space between the image and text */
+    }
+    
+    .ImageInfoREV {
+        width: 100%; /* Make the image responsive */
+        display: flex;
+        justify-content: center; /* Center the image */
+    }
+    .DataInfoREV {
+        width: 100%; /* Make the text section responsive */
+        text-align: center; /* Center the text */
+    }
+
+    .Dishes .container {
+        flex-direction: column; /* Stack dishes vertically */
+        align-items: center; /* Center the dishes */
+    }
+
+    .DishesTypes .Dish {
+        width: 100%; /* Make each dish take full width */
+        margin-bottom: 20px; /* Space between dishes */
+    }
+
+    .DishesTypes .Dish img {
+        width: 100%; /* Ensure images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .Dishes h2, .Dishes p {
+        text-align: center; /* Center the heading and paragraph */
+        width: 90%; /* Limit width for readability */
+    }
+
+
+    
+}
+
+@media (max-width: 400px){
+    .Info .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ImageInfo,.DataInfo{
+        width: 100%;
+    }
+    .Review .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .ImageInfoREV, .DataInfoREV{
+        width: 100%;
+    }
+    .Dishes{
+        height: 100%;
+    }
+    .DishesTypes .Dish{
+        width: 100%;
+        height: 20%;
+    }
+    .buttons{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .buttons button{
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    
+
+}
+
+@media (max-width:450px){
+    .footerSec4 img{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 500px) {
+    nav {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+    .Navlist ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    header {
+        height: auto;
+        background-size: cover;
+        padding: 20px;
+    }
+    .Head h1 {
+        font-size: 35px;
+    }
+    .Head p {
+        font-size: 18px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+    .Info .container, .Review .container {
+        flex-direction: column;
+    }
+    .ImageInfo img, .ImageInfoREV img {
+        width: 100%;
+        height: auto;
+    }
+    .DataInfo, .DataInfoREV {
+        width: 100%;
+    }
+
+    .MainFooter .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .Sec {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    footer ul {
+        padding: 0;
+    }
+
+    .DishesTypes {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .Dish {
+        width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 15px;
+    }
 }
 
 
