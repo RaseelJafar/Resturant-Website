@@ -882,7 +882,7 @@ p{
     }
    
     .SubFooter img {
-        width: 200px; /* Reduce the image size */
+        width: 150px; /* Reduce the image size */
         max-width: 100%; /* Ensure it doesn't overflow beyond container */
         display: block; /* Make sure it stays within its container */
         margin: 0 auto; /* Center the image within the subfooter */
