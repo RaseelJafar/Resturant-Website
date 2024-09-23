@@ -203,11 +203,7 @@ footer .SubFooter .container{
     font-size: 40px; 
     color: #8c8a86;
 }
-/*
-footer .SubFooter .container img{
-    width: 400px;
-    height: 200px;
-}*/
+
 /*section*/
 .Info{
     display: flex;
