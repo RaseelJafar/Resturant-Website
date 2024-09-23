@@ -203,11 +203,11 @@ footer .SubFooter .container{
     font-size: 40px; 
     color: #8c8a86;
 }
-
+/*
 footer .SubFooter .container img{
     width: 400px;
     height: 200px;
-}
+}*/
 /*section*/
 .Info{
     display: flex;
@@ -858,8 +858,8 @@ p{
         margin: 0;
     }
     .SubFooter img {
-        width: 50px; /* Reduce the image size */
-        height: 50px; /* Maintain aspect ratio */
+        width: 200px; /* Reduce the image size */
+        height: auto; /* Maintain aspect ratio */
         max-width: 100%; /* Ensure it doesn't overflow beyond container */
         display: block; /* Make sure it stays within its container */
         margin: 0 auto; /* Center the image within the subfooter */
@@ -873,6 +873,30 @@ p{
         padding: 0;
         box-sizing: border-box;
     }
+    body {
+        overflow-x: hidden;
+    }    
+    .FooterImg img{
+        width: auto;
+        height: auto;
+    }
+   
+    .SubFooter img {
+        width: 200px; /* Reduce the image size */
+        max-width: 100%; /* Ensure it doesn't overflow beyond container */
+        display: block; /* Make sure it stays within its container */
+        margin: 0 auto; /* Center the image within the subfooter */
+        object-fit: contain; /* Ensure image fits without distortion */
+        height: auto;
+    }
+    .SubFooter p{
+        font-size: 50%;
+    }
+    .SubFooter .icon{
+        width: 30px;
+        height: 30px;
+    }
+
     .Info .ImageInfo img {
         width: 80%; /* Set to 80% of its container */
         max-width: 150px; /* Set a maximum width */
@@ -969,11 +993,6 @@ p{
     .Dishes h2, .Dishes p {
         text-align: center;
         width: 90%;
-    }
-
-    /* Add spacing between the last section and the footer */
-    .last-section { /* Replace with the actual class or ID of the last section */
-        margin-bottom: 20px; /* Adjust the space as needed */
     }
 }
 
