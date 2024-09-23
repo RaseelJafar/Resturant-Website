@@ -264,6 +264,10 @@ footer .SubFooter .container img{
     justify-content: center;
     height: 100%;
 }
+.ImageInfoREV img{
+    width: 500px;
+    height: 400px;
+}
 
 .Review p{
     color: #8c8a86;
@@ -445,6 +449,19 @@ p{
 }
 
 @media (max-width:768px){
+    .Head h1 {
+        font-size: 40px; /* Smaller font size */
+        margin-bottom: 8px;
+    }
+    .Head p {
+        font-size: 20px; /* Smaller font size */
+        margin-bottom: 10px;
+    }
+    .Head img {
+        width: 100%;
+        max-width: 300px; /* Smaller max width */
+        height: auto;
+    }
     .footerSec4 img{
         height: 10px;
         width: 10px;
@@ -518,99 +535,122 @@ p{
         text-align: center; /* Center the heading and paragraph */
         width: 90%; /* Limit width for readability */
     }
-
-
-    
+    .last .container{
+        gap: 20px;
+        font-size:80%;
+    }
 }
 
-@media (max-width: 400px){
-    .Info .container{
+@media (max-width: 450px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Ensure body doesn't overflow horizontally */
+    body {
+        overflow-x: hidden;
+    }
+
+    .Info .container {
         display: flex;
         flex-direction: column-reverse;
     }
-    .ImageInfo,.DataInfo{
+    .ImageInfo, .DataInfo {
         width: 100%;
     }
-    .Review .container{
+    .Review .container {
         display: flex;
         flex-direction: column;
     }
-    .ImageInfoREV, .DataInfoREV{
+    .ImageInfoREV img {
+        width: 80%; /* Set the image width to 80% of its container */
+        height: auto; /* Ensure it scales proportionally */
+        margin: 0 auto; /* Center the image */
+        display: block;
+    }
+    .Review .container {
+        padding: 10px; /* Reduce padding to make it more compact */
+    }
+    .DataInfoREV {
+        font-size: 20px; /* Reduce font size for review text */
+    }
+    .Dishes {
+        height: auto; /* Adjust to auto for better fit on mobile */
+    }
+    .DishesTypes .Dish {
         width: 100%;
+        height: auto; /* Adjust to auto for better scaling */
+        margin-bottom: 10px; /* Add margin between dishes */
     }
-    .Dishes{
-        height: 100%;
-    }
-    .DishesTypes .Dish{
-        width: 100%;
-        height: 20%;
-    }
-    .buttons{
+    .buttons {
         display: flex;
         justify-content: center;
         gap: 10px;
+        flex-direction: column; /* Stack buttons vertically on mobile */
     }
-    .buttons button{
+    .buttons button {
         padding: 15px;
         border-radius: 10px;
+        width: 100%; /* Ensure buttons take full width */
     }
-    
-    
 
-}
-
-@media (max-width:450px){
-    .footerSec4 img{
-        height: 100px;
-        width: 100px;
+    /* Footer image adjustment */
+    .footerSec4 img {
+        width: 80px; /* Ensure image fits within footer */
+        height: 80px; /* Maintain aspect ratio */
     }
-}
 
-@media (max-width: 500px) {
+    /* Additional tweaks */
     nav {
-        width: 100%;
-        flex-direction: column;
-        height: auto;
+        max-width: 100%; /* Ensure it doesn't exceed 100% of screen */
+        overflow-x: hidden;
+        padding: 0; /* Remove extra padding that might push nav */
+        margin: 0; /* Reset any margins */
+        display: flex;
+        justify-content: center; /* Center the items */
+        align-items: center;
     }
     .Navlist ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 0; /* Remove potential padding from nav list */
+        margin: 0; /* Ensure no unwanted margins */
+        width: 100%;
     }
-
+    .Navlist ul li {
+        margin: 0 5px;
+        font-size: 14px; /* Smaller font size */
+    }    
     header {
         height: auto;
         background-size: cover;
-        padding: 20px;
+        padding: 10px;
     }
     .Head h1 {
-        font-size: 35px;
+        font-size: 24px;
+        margin-bottom: 10px;
     }
     .Head p {
-        font-size: 18px;
+        font-size: 14px;
+        margin-bottom: 15px;
     }
-    .buttons {
-        flex-direction: column;
+    .Head img {
+        width: 100%; /* Make image smaller */
+        max-width: 200px; /* Set a max width */
+        height: auto; /* Maintain aspect ratio */
     }
-
     .container {
         width: 100%;
         padding: 20px;
     }
-    .Info .container, .Review .container {
-        flex-direction: column;
-    }
-    .ImageInfo img, .ImageInfoREV img {
-        width: 100%;
-        height: auto;
-    }
-    .DataInfo, .DataInfoREV {
-        width: 100%;
-    }
-
     .MainFooter .container {
         flex-direction: column;
         text-align: center;
+        padding: 10px;
     }
     .Sec {
         width: 100%;
@@ -618,16 +658,12 @@ p{
     }
     footer ul {
         padding: 0;
+        margin: 0;
     }
-
     .DishesTypes {
         flex-direction: column;
         gap: 20px;
     }
-    .Dish {
-        width: 100%;
-    }
-
     h1, h2 {
         font-size: 28px;
     }
@@ -637,6 +673,309 @@ p{
     button {
         padding: 10px 15px;
     }
+    .buttons button {
+        font-size: 14px;
+        padding:10px 15px;
+        border-radius: 10px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .Info .container, .Review .container {
+        flex-direction: column;
+    }
+   
+    .DataInfo, .DataInfoREV {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .DishesTypes {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .DishesTypes .Dish {
+        width: 100%;
+        height: auto;
+    }
+    body {
+        overflow-x: hidden;
+        margin: 0;
+    }
+    
+
 }
+@media (max-width: 376px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .FooterImg img{
+        width: 20px;
+        height: 10px;
+    }
+    /* Ensure body doesn't overflow horizontally */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navigation styling */
+    nav {
+        max-width: 100%; 
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+    }
+    .Navlist ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    .Navlist ul li {
+        margin: 0 5px;
+        font-size: 12px; /* Smaller font size */
+    }
+
+    /* Header adjustments */
+    header {
+        height: auto;
+        background-size: cover;
+        padding: 5px; /* Less padding for smaller screens */
+    }
+    .Head h1 {
+        font-size: 22px; /* Smaller font size */
+        margin-bottom: 8px;
+    }
+    .Head p {
+        font-size: 12px; /* Smaller font size */
+        margin-bottom: 10px;
+    }
+    .Head img {
+        width: 100%;
+        max-width: 180px; /* Smaller max width */
+        height: auto;
+    }
+
+    /* Info and Review sections */
+    .Info .container, .Review .container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 10px; /* Reduced padding */
+    }
+    .ImageInfo, .DataInfo, .ImageInfoREV, .DataInfoREV {
+        width: 100%;
+    }
+    .ImageInfoREV img {
+        width: 70%; /* Smaller image */
+        height: auto;
+        margin: 0 auto;
+    }
+    .DataInfoREV {
+        font-size: 18px; /* Smaller text size */
+    }
+
+    /* Dishes section */
+    .Dishes {
+        height: auto;
+    }
+    .DishesTypes .Dish {
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px; /* Reduced margin */
+    }
+
+    /* Button adjustments */
+    .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        flex-direction: column; /* Stack buttons vertically */
+    }
+    .buttons button {
+        padding: 10px;
+        border-radius: 8px; /* Smaller padding and radius */
+        width: 100%;
+        font-size: 12px; /* Smaller text */
+    }
+
+    /* Footer image */
+    .footerSec4 img {
+        width: 60px;  /* Reduced width to fit */
+        height: 60px; /* Maintain aspect ratio */
+        max-width: 100%; /* Ensure the image doesn't overflow */
+        display: block; /* Ensure the image stays within its container */
+        margin: 0 auto; /* Center the image */
+    }
+
+    /* Footer container */
+    .MainFooter .container {
+        flex-direction: column;
+        text-align: center;
+        padding: 5px; /* Less padding */
+    }
+    .Sec {
+        width: 100%;
+        margin-bottom: 15px; /* Less margin */
+    }
+    footer ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Font size adjustments */
+    h1, h2 {
+        font-size: 24px; /* Reduced heading sizes */
+    }
+    p {
+        font-size: 14px; /* Reduced paragraph font size */
+    }
+    
+    
+
+    /* Dishes container */
+    .DishesTypes {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .DishesTypes .Dish {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Body to prevent overflow */
+    body {
+        overflow-x: hidden;
+        margin: 0;
+    }
+    .SubFooter img {
+        width: 50px; /* Reduce the image size */
+        height: 50px; /* Maintain aspect ratio */
+        max-width: 100%; /* Ensure it doesn't overflow beyond container */
+        display: block; /* Make sure it stays within its container */
+        margin: 0 auto; /* Center the image within the subfooter */
+        object-fit: contain; /* Ensure image fits without distortion */
+    }
+    
+}
+@media (max-width: 321px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .Info .ImageInfo img {
+        width: 80%; /* Set to 80% of its container */
+        max-width: 150px; /* Set a maximum width */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 auto; /* Center the image */
+        display: block; /* Ensure it behaves as a block element */
+    }
+    body {
+        overflow-x: hidden;
+    }
+
+    .Head h1 {
+        font-size: 20px; /* Smaller font size */
+        margin-bottom: 5px;
+    }
+    .Head p {
+        font-size: 12px; /* Smaller font size */
+        margin-bottom: 5px;
+    }
+    .Head img {
+        width: 100%;
+        max-width: 150px; /* Smaller max width */
+        height: auto;
+    }
+    .footerSec4 img {
+        width: 50px; /* Smaller footer image */
+        height: 50px;
+    }
+    .footer .Sec {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px; /* Reduced gap */
+    }
+    .MainFooter .container {
+        gap: 10px; /* Reduced gap */
+    }
+    footer ul li {
+        border-bottom: none;
+    }
+    .Navlist ul {
+        gap: 5px; /* Adjust spacing between items */
+    }
+
+    .DishesTypes {
+        flex-direction: column;
+    }
+
+    .DishesTypes .Dish {
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    .Info .container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .ImageInfo, .DataInfo {
+        width: 100%;
+    }
+
+    .Review .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduced gap */
+    }
+
+    .ImageInfoREV {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .DataInfoREV {
+        width: 100%;
+        text-align: center;
+        font-size: 14px; /* Smaller font size for review text */
+    }
+
+    .Dishes .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .DishesTypes .Dish {
+        width: 100%;
+    }
+
+    .DishesTypes .Dish img {
+        width: 100%;
+        height: auto;
+    }
+
+    .Dishes h2, .Dishes p {
+        text-align: center;
+        width: 90%;
+    }
+
+    /* Add spacing between the last section and the footer */
+    .last-section { /* Replace with the actual class or ID of the last section */
+        margin-bottom: 20px; /* Adjust the space as needed */
+    }
+}
+
 
 
